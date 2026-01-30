@@ -1,0 +1,234 @@
+@media screen and (max-width: 1024px) {
+  .home2-section h1 {
+    font-size: 36px;
+  }
+  .home2-section h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* Navbar */
+  .navbar .navbar-nav {
+    height: calc(100vh - 65px);
+    padding: 0.8rem;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primarycolor);
+  }
+
+  .navbar-collapse.collapsing {
+    height: auto;
+    -webkit-transition: left 0.2s ease;
+    -o-transition: left 0.2s ease;
+    -moz-transition: left 0.2s ease;
+    transition: left 0.2s ease;
+    left: -100%;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.2s ease-in;
+    -o-transition: left 0.2s ease-in;
+    -moz-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  .navbar .nav-link:hover::after,
+  .navbar .navbar-nav .nav-link.active-scroll::after {
+    transform: scaleX(0.15);
+  }
+
+  /* work experience */
+  .workexperience .bd {
+    width: 100%;
+    height: 300px;
+  }
+  .skill-section .skill-icon {
+    width: calc(30% - 10px);
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divider {
+    margin: 10px 0 16px 0;
+  }
+  .home-p {
+    font-size: 14px;
+  }
+  .home2-section img {
+    width: 75%;
+  }
+  .heading {
+    font-size: 35.2px;
+    line-height: 38.72px;
+  }
+  .pre-heading {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .content {
+    text-align: justify;
+  }
+  .workexperience span:nth-of-type(1) {
+    width: 100%;
+  }
+  .workexperience .experience-title {
+    font-size: 1rem;
+  }
+  .education-section .education-item h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .education-section .education-item h5 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .education-section .education-item p {
+    font-size: 13.92px;
+  }
+  .sertificate-section h2 {
+    font-size: 25.6px;
+    font-weight: 500;
+    line-height: 28.16px;
+  }
+  .portofolio-section .portofolio-item {
+    padding: 12px 12px 24px 12px;
+  }
+  .portofolio-section h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26.4px;
+  }
+  .portofolio-section .divider {
+    width: 837px;
+    height: 4px;
+  }
+
+  .service-section h6 {
+    margin: 25px 0 12px 0;
+  }
+  .service-section p {
+    margin: 6px 0 0 0;
+    font-size: 13.92px;
+  }
+  footer {
+    padding: 3.75rem 0;
+  }
+  footer h4 {
+    font-size: 24px;
+  }
+  footer span {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  /* Work Experience */
+  .workexperience {
+    padding: 80px 0 60px 0;
+  }
+
+  .workexperience .logo-left {
+    width: 50%;
+    height: 300px;
+  }
+
+  .workexperience .bd {
+    width: 50%;
+    height: 300px;
+  }
+
+  .workexperience .work::after {
+    width: 24px;
+    height: 20px;
+  }
+
+  .workexperience .work::before {
+    width: 24px;
+    height: 20px;
+  }
+
+  .workexperience .work {
+    padding: 32px 12px;
+    position: relative;
+  }
+  .workexperience span:nth-of-type(1) {
+    width: 70%;
+  }
+  .workexperience .divider {
+    height: 4px;
+    border-radius: 50px;
+    margin: 10px 0 16px 0;
+  }
+
+  .workexperience .work-description {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+
+  .workexperience .skill-icon {
+    width: calc(20% - 10px);
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+  }
+
+  .education-section .education-desc {
+    padding-left: 30px;
+    margin-left: 12px;
+    box-sizing: border-box;
+    width: calc(100% - 12px);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .heading {
+    font-size: 1.7rem;
+    line-height: 29.92px;
+  }
+  .education-section .education-item h3 {
+    font-size: 1.25rem;
+    line-height: 30px;
+  }
+  .education-section .education-item h5 {
+    font-size: 1rem;
+    line-height: 17.6px;
+  }
+  .service-section h5 {
+    font-size: 1rem;
+    line-height: 17.6px;
+  }
+  .service-section p {
+    font-size: 0.8rem;
+    line-height: 19.2px;
+  }
+  .portofolio-section h4 {
+    font-size: 1.25rem;
+    line-height: 22px;
+  }
+  .sertificate-section h2 {
+    font-size: 1.4rem;
+    line-height: 24.64px;
+  }
+  /* Work experience section */
+  .workexperience .bd {
+    width: 80%;
+    height: 210px;
+  }
+  .workexperience .logo-left {
+    width: 60%;
+    height: 230px;
+  }
+}
