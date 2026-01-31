@@ -15,12 +15,12 @@
   --bodytext: #fff;
 }
 /* ========== ALL STYLING IN WEBSITE ========== */
-html {
-  scroll-behavior: smooth;
-}
+html,
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 img,
 svg {
   vertical-align: middle;
