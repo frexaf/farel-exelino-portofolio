@@ -67,9 +67,9 @@ const modalImg = document.getElementById("modalSertifImg");
 
 document.querySelectorAll(".preview-sertif").forEach((img) => {
   img.addEventListener("click", function () {
-    const imgSrc = this.getAttribute("data-img"); // ambil sumber gambar
-    modalImg.src = imgSrc; // ganti isi gambar di modal
-    modal.show(); // tampilkan modal
+    const imgSrc = this.getAttribute("data-img");
+    modalImg.src = imgSrc;
+    modal.show();
   });
 });
 

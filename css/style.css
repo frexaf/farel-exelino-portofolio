@@ -15,12 +15,14 @@
   --bodytext: #fff;
 }
 /* ========== ALL STYLING IN WEBSITE ========== */
-html,
-body {
+html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
+}
+body {
+  overflow-y: hidden;
   overflow-x: hidden;
 }
-
 img,
 svg {
   vertical-align: middle;
@@ -163,15 +165,9 @@ svg {
 
 .navbar {
   height: 66px;
-  width: 100%;
   padding: 21px 0;
-  font-style: normal;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 1.1em;
-  color: var(---textcolor);
-  box-sizing: border-box;
-  z-index: 15;
   transition: all ease-in-out 0.5s;
 }
 .nav-color {
@@ -185,7 +181,6 @@ svg {
   color: var(---textcolor);
   font-size: 1rem;
   transition: 0.4s ease;
-  text-transform: uppercase;
 }
 .navbar .nav-link:hover {
   color: var(--bodytext);
@@ -300,7 +295,7 @@ svg {
 }
 
 .home-section img {
-  width: 400px;
+  width: 25rem;
   border-radius: 10px;
 }
 /* ========== Home End ========== */
@@ -653,17 +648,10 @@ svg {
   padding: 3.75rem 0;
   mix-blend-mode: normal;
 }
-.card-sertificate {
-  height: 11rem;
-  background: var(--bodytext);
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-}
 
 .card-sertificate img {
-  border-radius: 6px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .sertificate-section .divider {

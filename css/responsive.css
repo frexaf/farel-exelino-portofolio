@@ -10,7 +10,7 @@
 @media screen and (max-width: 992px) {
   /* Navbar */
   .navbar .navbar-nav {
-    height: calc(100vh - 65px);
+    max-height: calc(100vh - 65px);
     padding: 0.8rem;
   }
 
@@ -194,7 +194,7 @@
 }
 @media screen and (max-width: 577px) {
   .home-section img {
-    width: 255px;
+    width: 15.9375rem;
     border-radius: 10px;
   }
 }
