@@ -10,7 +10,7 @@
 @media screen and (max-width: 992px) {
   /* Navbar */
   .navbar .navbar-nav {
-    max-height: calc(100vh - 65px);
+    height: calc(100vh - 65px);
     padding: 0.8rem;
   }
 

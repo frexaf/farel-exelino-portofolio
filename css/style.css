@@ -31,29 +31,6 @@ svg {
   min-height: 1.5em;
 }
 
-.typing-text {
-  color: var(--accsentcolor);
-  transition: opacity 0.4s ease;
-}
-
-.typing-cursor {
-  margin-left: 6px;
-  color: var(--accsentcolor);
-  animation: blinkCursor 1.2s infinite;
-}
-
-@keyframes blinkCursor {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
 .pre-heading {
   font-size: 24px;
   font-weight: 500;
@@ -186,6 +163,9 @@ svg {
   color: var(--bodytext);
   font-weight: 500;
 }
+.navbar .nav-link.social::after {
+  content: none;
+}
 .navbar .nav-link::after {
   content: "";
   display: block;
@@ -208,6 +188,7 @@ svg {
   transform: scaleX(1);
   transition: 0.4s;
 }
+
 /* ========== Navbar End ========== */
 
 /* ========== Home Start ========== */
@@ -230,7 +211,9 @@ svg {
   font-family: "JetBrains Mono", sans-serif;
   font-size: 40px;
   margin-bottom: 20px;
+  color: var(--accsentcolor);
 }
+
 .home-section p {
   color: var(---textcolor);
 }
@@ -243,7 +226,7 @@ svg {
   font-size: 14px;
   font-weight: 400;
 }
-.home-section .btn,
+/* .home-section .btn, */
 .home-section .hhr {
   padding: 0 0 30px 0;
 }
@@ -253,6 +236,7 @@ svg {
 .home-section .btn-home1 {
   background: var(--accsentcolor);
   color: var(--bodytext);
+  text-decoration: none;
   border: 2px solid transparent;
   border-radius: 10px;
   padding: 10px 10px;
@@ -271,9 +255,11 @@ svg {
 }
 
 .home-section .btn-home1:hover {
-  background: transparent;
+  /* background: transparent;
   color: var(--bodytext);
-  border: 2px solid var(--bodytext);
+  border: 2px solid var(--bodytext); */
+  transition: 0.2s ease;
+  opacity: 70%;
 }
 .home-section .btn-home2:hover {
   background: var(--accsentcolor);
@@ -297,6 +283,18 @@ svg {
 .home-section img {
   width: 25rem;
   border-radius: 10px;
+}
+/* Modal Button CV */
+
+.home-section .modal .cv-button {
+  background: var(--accsentcolor_2);
+  color: var(--bodytext);
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.home-section .modal .cv-button:hover {
+  transition: 0.4s ease;
+  background: var(--accsentcolor);
 }
 /* ========== Home End ========== */
 
@@ -507,7 +505,7 @@ svg {
   width: 400px;
   height: 400px;
   border-radius: 15px;
-  border: 2px solid var(--bodytext);
+  /* border: 2px solid var(--bodytext); */
 }
 .skill-section {
   background: var(--secondaycolor);

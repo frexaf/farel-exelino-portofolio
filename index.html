@@ -116,7 +116,7 @@
           <p class="home-p">. Available for freelance work</p>
         </div>
         <div class="row g-3">
-          <div class="col-lg-5 col-md-6 order-2 order-lg-1">
+          <div class="col-lg-5 order-2 order-lg-1">
             <div class="info-home text-center text-lg-start mt-3 mt-lg-0">
               <h1
                 class="text-white fw-bold"
@@ -125,10 +125,7 @@
               >
                 Hi, I'm Farel
               </h1>
-              <h3 class="text-white typing-wrapper">
-                <span class="typing-text"></span>
-                <span class="typing-cursor">|</span>
-              </h3>
+              <h3 class="typing-text">Junior Frontend Dev</h3>
             </div>
             <div class="info-p">
               <p class="mb-0 text-center text-lg-start">
@@ -150,10 +147,14 @@
               data-aos-delay="300"
               data-aos-offset="0"
             >
-              <button class="btn-home1">
+              <a class="btn-home1" href="#contact">
                 <i class="fa-solid fa-arrow-right"></i> Hire Me
-              </button>
-              <button class="btn-home2">
+              </a>
+              <button
+                class="btn-home2"
+                data-bs-toggle="modal"
+                data-bs-target="#CVModal"
+              >
                 <i class="fa-solid fa-download"></i> Download CV
               </button>
             </div>
@@ -192,7 +193,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-6 offset-lg-1 my-auto order-1 order-lg-2">
+          <div class="col-lg-6 offset-lg-1 my-auto order-1 order-lg-2">
             <img
               src="img/Hero Banner.png"
               alt=""
@@ -200,6 +201,52 @@
               data-aos="fade-left"
               data-aos-delay="200"
             />
+          </div>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="CVModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header d-flex justify-content-between border-0">
+                <h1
+                  class="modal-title fs-5 text-light text-dark"
+                  id="exampleModalLabel"
+                >
+                  My Available CV
+                </h1>
+                <button
+                  type="button"
+                  class="btn btn-outline-dark"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+              <div class="modal-body">
+                <a
+                  href="https://drive.google.com/file/d/1xmqjGzJUQ2mKmshDCCL6aZ9J271bEwVV/view?usp=sharing"
+                  target="_blank"
+                  role="button"
+                  class="d-flex justify-content-center align-items-center btn rounded-3 mb-2 w-100 cv-button"
+                >
+                  CV Indonesia
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1Q8fAuwTTy9G9UzU9f_K9T9eoGguE5kXP/view?usp=sharing"
+                  target="_blank"
+                  role="button"
+                  class="d-flex justify-content-center align-items-center btn rounded-3 mb-2 w-100 cv-button"
+                >
+                  CV English
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -285,10 +332,11 @@
               Building Meaningful <br />Digital Experiences
             </h1>
             <h6 class="content">
-              I'm a junior front-end developer passionate about building modern
-              and responsive web experiences. My journey began with a love for
-              design and evolved into a deep curiosity for how the web works
-              combining logic with creativity to bring ideas to life.
+              Hello! Im Farel Exelino Al Fahri, a Full Stack Developer based in
+              Indonesia with some expertise in the field of networking and
+              operating systems like Debian, Cisco, and Mikrotik. As A Frontend
+              Developer, i prioritize that the web I build performs well in
+              terms of system and responsive user interface.
             </h6>
             <h6 class="mb-5 content">
               “Design is not just what it looks like and feels like. Design is
@@ -393,6 +441,11 @@
               class="skill-icon d-flex justify-content-center align-items-center"
             >
               <img src="img/mikrotik.png" alt="mikrotik icon" />
+            </div>
+            <div
+              class="skill-icon d-flex justify-content-center align-items-center"
+            >
+              <img src="img/debian.png" alt="html icon" />
             </div>
             <div
               class="skill-icon d-flex justify-content-center align-items-center"
@@ -1030,7 +1083,8 @@
                 See my github profile
               </h4>
               <a
-                href="#"
+                href="https://github.com/frexaf"
+                target="_blank"
                 class="text-decoration-none text-white p-2 rounded-4 button-saving text-light fw-medium text-center"
               >
                 My Github
@@ -1120,7 +1174,11 @@
     <footer class="footer-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-6 col-12 mb-4" data-aos="fade-up">
+          <div
+            class="col-lg-8 col-md-6 col-12 mb-4"
+            data-aos="fade-up"
+            data-aos-offset="0"
+          >
             <h4 class="text-center text-md-start">Farel Exelino</h4>
             <span class="d-block text-center text-md-start mb-3 w-100"
               >Connect with me</span
@@ -1157,14 +1215,21 @@
             class="col-lg-4 col-md-6 col-12 d-flex justify-content-center justify-content-md-end"
             data-aos="fade-up"
             data-aos-delay="100"
+            data-aos-offset="0"
           >
             <ul
               class="list-unstyled d-flex flex-row gap-4 mb-0 text-center text-md-end"
             >
-              <li><a href="#" class="text-decoration-none">Home</a></li>
-              <li><a href="#" class="text-decoration-none">About</a></li>
-              <li><a href="#" class="text-decoration-none">Portofolio</a></li>
-              <li><a href="#" class="text-decoration-none">Contact</a></li>
+              <li><a href="#home" class="text-decoration-none">Home</a></li>
+              <li><a href="#about" class="text-decoration-none">About</a></li>
+              <li>
+                <a href="#portofolio" class="text-decoration-none"
+                  >Portofolio</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-decoration-none">Contact</a>
+              </li>
             </ul>
           </div>
         </div>

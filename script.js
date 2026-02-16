@@ -74,47 +74,79 @@ document.querySelectorAll(".preview-sertif").forEach((img) => {
 });
 
 // Animasi Ketik
-document.addEventListener("DOMContentLoaded", () => {
-  const textEl = document.querySelector(".typing-text");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const textEl = document.querySelector(".typing-text");
 
-  const roles = [
-    "Junior Frontend Dev",
-    "UI / UX Enthusiast",
-    "Web Technology Learner",
-  ];
+//   const roles = [
+//     "Junior Frontend Dev",
+//     "UI / UX Enthusiast",
+//     "Web Technology Learner",
+//   ];
 
-  let roleIndex = 0;
+//   let roleIndex = 0;
+//   let charIndex = 0;
+//   let isTyping = true;
+
+//   const typingSpeed = 100;
+//   const pauseAfterWord = 1600;
+//   const fadeDuration = 400;
+
+//   function startTyping() {
+//     const currentRole = roles[roleIndex];
+
+//     if (isTyping && charIndex <= currentRole.length) {
+//       textEl.textContent = currentRole.slice(0, charIndex);
+//       charIndex++;
+//       setTimeout(startTyping, typingSpeed);
+//     } else {
+//       // Pause setelah satu kata selesai
+//       setTimeout(() => {
+//         textEl.style.opacity = "0";
+
+//         setTimeout(() => {
+//           charIndex = 0;
+//           roleIndex = (roleIndex + 1) % roles.length;
+//           textEl.textContent = "";
+//           textEl.style.opacity = "1";
+//           startTyping();
+//         }, fadeDuration);
+//       }, pauseAfterWord);
+//     }
+//   }
+
+//   startTyping();
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const typingElement = document.querySelector(".info-home h3");
+  const words = ["Junior Frontend Dev", "UI/UX Designer", "Web Enthusiast"];
+  let wordIndex = 0;
   let charIndex = 0;
-  let isTyping = true;
+  let isDeleting = false;
+  let typingSpeed = 100;
 
-  const typingSpeed = 85;
-  const pauseAfterWord = 1600;
-  const fadeDuration = 400;
+  function type() {
+    const currentWord = words[wordIndex];
+    let displayedText = currentWord.substring(0, charIndex);
+    typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
 
-  function startTyping() {
-    const currentRole = roles[roleIndex];
-
-    if (isTyping && charIndex <= currentRole.length) {
-      textEl.textContent = currentRole.slice(0, charIndex);
+    if (!isDeleting && charIndex < currentWord.length) {
       charIndex++;
-      setTimeout(startTyping, typingSpeed);
+      setTimeout(type, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, typingSpeed / 2);
     } else {
-      // Pause setelah satu kata selesai
-      setTimeout(() => {
-        textEl.style.opacity = "0";
-
-        setTimeout(() => {
-          charIndex = 0;
-          roleIndex = (roleIndex + 1) % roles.length;
-          textEl.textContent = "";
-          textEl.style.opacity = "1";
-          startTyping();
-        }, fadeDuration);
-      }, pauseAfterWord);
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(type, 1000);
     }
   }
 
-  startTyping();
+  // Mulai animasi
+  type();
 });
 
 // sweetalert
