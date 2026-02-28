@@ -90,11 +90,14 @@
   .workexperience .experience-title {
     font-size: 1rem;
   }
+  .workexperience .work h2 {
+    font-size: 1.6rem;
+  }
   .education-section .education-item h3 {
     font-size: 24px;
     line-height: 36px;
   }
-  .education-section .education-item h5 {
+  .education-section .education-item h4 {
     font-size: 20px;
     line-height: 22px;
   }
@@ -109,7 +112,7 @@
   .portofolio-section .portofolio-item {
     padding: 12px 12px 24px 12px;
   }
-  .portofolio-section h4 {
+  .portofolio-section h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 26.4px;
@@ -119,10 +122,10 @@
     height: 4px;
   }
 
-  .service-section h6 {
+  .service-section .content {
     margin: 25px 0 12px 0;
   }
-  .service-section p {
+  .service-section .details {
     margin: 6px 0 0 0;
     font-size: 13.92px;
   }
@@ -199,20 +202,33 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .heading {
     font-size: 1.7rem;
     line-height: 29.92px;
+  }
+  .home-section h1 {
+    font-size: 40px;
+  }
+  .home-section h2 {
+    font-size: 28px;
+  }
+  .workexperience .work h2 {
+    font-size: 1.4rem;
+  }
+  .about-section img {
+    width: 18.75rem;
+    height: 18.75rem;
   }
   .education-section .education-item h3 {
     font-size: 1.25rem;
     line-height: 30px;
   }
-  .education-section .education-item h5 {
+  .education-section .education-item h4 {
     font-size: 1rem;
     line-height: 17.6px;
   }
-  .service-section h5 {
+  .service-section h3 {
     font-size: 1rem;
     line-height: 17.6px;
   }

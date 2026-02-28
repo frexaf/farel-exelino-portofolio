@@ -9,7 +9,6 @@ AOS.init({
 // Navbar ganti warna saat scroll
 const navbar = document.getElementsByTagName("nav")[0];
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
   if (window.scrollY > 1) {
     navbar.classList.replace("bg-transparent", "nav-color");
   } else if (this.window.scrollY <= 0) {
@@ -21,26 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  function activateNavLink() {
-    let currentSection = "";
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            link.classList.remove("active-scroll");
+            if (link.getAttribute("href") === `#${id}`) {
+              link.classList.add("active-scroll");
+            }
+          });
+        }
+      });
+    },
+    {
+      rootMargin: "-40% 0px -55% 0px", // aktif saat section di tengah viewport
+    },
+  );
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 200;
-      if (window.scrollY >= sectionTop) {
-        currentSection = section.getAttribute("id");
-      }
-    });
-
-    // Update class "active" pada navbar
-    navLinks.forEach((link) => {
-      link.classList.remove("active-scroll");
-      if (link.getAttribute("href").substring(1) === currentSection) {
-        link.classList.add("active-scroll");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", activateNavLink);
+  sections.forEach((section) => observer.observe(section));
 });
 // Swiper
 new Swiper(".portofolio-swiper", {
@@ -73,52 +72,8 @@ document.querySelectorAll(".preview-sertif").forEach((img) => {
   });
 });
 
-// Animasi Ketik
-// document.addEventListener("DOMContentLoaded", () => {
-//   const textEl = document.querySelector(".typing-text");
-
-//   const roles = [
-//     "Junior Frontend Dev",
-//     "UI / UX Enthusiast",
-//     "Web Technology Learner",
-//   ];
-
-//   let roleIndex = 0;
-//   let charIndex = 0;
-//   let isTyping = true;
-
-//   const typingSpeed = 100;
-//   const pauseAfterWord = 1600;
-//   const fadeDuration = 400;
-
-//   function startTyping() {
-//     const currentRole = roles[roleIndex];
-
-//     if (isTyping && charIndex <= currentRole.length) {
-//       textEl.textContent = currentRole.slice(0, charIndex);
-//       charIndex++;
-//       setTimeout(startTyping, typingSpeed);
-//     } else {
-//       // Pause setelah satu kata selesai
-//       setTimeout(() => {
-//         textEl.style.opacity = "0";
-
-//         setTimeout(() => {
-//           charIndex = 0;
-//           roleIndex = (roleIndex + 1) % roles.length;
-//           textEl.textContent = "";
-//           textEl.style.opacity = "1";
-//           startTyping();
-//         }, fadeDuration);
-//       }, pauseAfterWord);
-//     }
-//   }
-
-//   startTyping();
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
-  const typingElement = document.querySelector(".info-home h3");
+  const typingElement = document.querySelector(".info-home h2");
   const words = ["Junior Frontend Dev", "UI/UX Designer", "Web Enthusiast"];
   let wordIndex = 0;
   let charIndex = 0;
@@ -182,7 +137,7 @@ form.addEventListener("submit", async function (e) {
         icon: "success",
         title: "Pesan terkirim!",
         text: "Terima kasih, saya akan segera menghubungi Anda.",
-        confirmButtonColor: "#c88700",
+        confirmButtonColor: "rgba(255, 179, 0, 0.75)",
       });
 
       form.reset();
